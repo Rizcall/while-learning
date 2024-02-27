@@ -3,14 +3,29 @@
 using namespace std;
 
 int main(){
+    // f_n = f_n1 + f_n2
 
-    int a = 5;
+    int n;
+    int f_n;
+    int f_n1;
+    int f_n2;
 
-    while(a <= 10){
-        cout << "hore" << endl;
-        cout << a << endl;
-        a += 1;
+    cout << "Program deret fibonacci\n";
+    cout << "Masukkan nilai n : ";
+    cin >> n;
+
+    f_n1 = 1;
+    f_n2 = 0;
+    f_n = f_n1 + f_n2;
+    cout << f_n << " ";
+
+    for(int i = 1; i < n; i++){
+        f_n = f_n1 + f_n2;
+        f_n2 = f_n1;
+        f_n1 = f_n;
+        cout << f_n << " ";
     }
 
-    cout << " selesai " << endl;
+    cout << " \n";
+
 }
